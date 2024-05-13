@@ -96,5 +96,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-KVR-WDR7500
+        name: Build-Padavan-KVR-WDR7500V8
         path: /opt/images

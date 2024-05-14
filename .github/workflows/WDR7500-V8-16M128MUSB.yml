@@ -112,7 +112,9 @@ jobs:
         echo    "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config #网易云解锁
         sed -i '/CONFIG_FIRMWARE_INCLUDE_WYYBIN/d' .config #删除配置项网易云解锁
         echo    "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> .config #网易云解锁GO版本执行文件（4M多）注意固件超大小,不集成会自动下载
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DDNSTO/d' .config #删除配置DDNSTO
         echo "CONFIG_FIRMWARE_INCLUDE_DDNSTO=n" >> .config #ddnsto
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALDRIVER/d' .config #删除阿里云盘
         echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=y" >> .config #阿里云盘不占空间(5.0kb左右)
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可

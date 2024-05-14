@@ -1,11 +1,11 @@
-SRC_NAME=aria2-1.36.0
-SRC_URL=https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz
+SRC_NAME=aria2-1.35.0
+SRC_URL=https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz
 
-SRC_ARIA_NG_NAME=AriaNg-1.3.0-AllInOne
-SRC_ARIA_NG_URL=https://github.com/mayswind/AriaNg/releases/download/1.3.0/AriaNg-1.3.0-AllInOne.zip
+SRC_ARIA_NG_NAME=AriaNg-1.1.4-AllInOne
+SRC_ARIA_NG_URL=https://github.com/mayswind/AriaNg/releases/download/1.1.4/AriaNg-1.1.4-AllInOne.zip
 
-CFLAGS  += -ffunction-sections -fdata-sections -fvisibility=hidden
-CXXFLAGS += -ffunction-sections -fdata-sections -fvisibility-inlines-hidden
+CFLAGS  += -ffunction-sections -fdata-sections
+CXXFLAGS += -ffunction-sections -fdata-sections
 LDFLAGS += -Wl,--gc-sections -static-libstdc++
 
 THISDIR = $(shell pwd)
@@ -79,4 +79,3 @@ ifeq ($(CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL),y)
 endif
 	$(ROMFSINST) $(THISDIR)/$(SRC_NAME)/src/aria2c /usr/bin/aria2c
 	$(ROMFSINST) -p +x /usr/bin/aria.sh
-

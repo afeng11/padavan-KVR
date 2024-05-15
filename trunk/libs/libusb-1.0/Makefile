@@ -1,6 +1,7 @@
 SRC_NAME=libusb-1.0.27
 SRC_URL=https://github.com/libusb/libusb/releases/tag/v1.0.27/$(SRC_NAME).tar.bz2
 
+
 all: download_test extract_test config_test
 	$(MAKE) -j$(HOST_NCPU) -C $(SRC_NAME)
 
@@ -46,3 +47,4 @@ install:
 
 romfs:
 	cp -fP $(DESTDIR)/lib/libusb-1.0.so* $(ROMFSDIR)/lib
+

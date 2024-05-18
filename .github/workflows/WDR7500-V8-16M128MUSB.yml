@@ -2,6 +2,7 @@
 name: Build-Padavan-KVR-WDR7500V8
 
 on: 
+  workflow_dispatch:
   release:
     types: [published]
   push:
